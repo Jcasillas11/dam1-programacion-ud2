@@ -13,7 +13,8 @@ public class main {
         // 2. Observa el error de compilación.
 
         // Tu código aquí ↓
-        System.out.println(cuenta.saldo);
+
+        //System.out.println(cuenta.saldo);
 
         // ================================
         // EJERCICIO 2: Métodos públicos
@@ -24,6 +25,9 @@ public class main {
 
         // Tu código aquí ↓
         
+        cuenta.depositar(100);
+        cuenta.retirar(30);
+        System.out.println(cuenta.getSaldo());
 
         // ================================
         // EJERCICIO 3: Métodos privados
@@ -33,12 +37,14 @@ public class main {
 
         // Tu código aquí ↓
         
+        //cuenta.registrarOperacion("Hackeo", 999);
 
         // ================================
         // EJERCICIO 4: Libre
         // ================================
         // Puedes hacer pruebas adicionales con los métodos disponibles
         // para asegurarte de que comprendes la diferencia entre public y private.
+
     }
 }
 
@@ -46,16 +52,17 @@ public class main {
 // RESPUESTAS DE REFLEXIÓN
 // ================================
 // Ejercicio 1: ¿por qué no puedo acceder al saldo directamente?
-// Respuesta: ....................................................
-
+// Respuesta: Porque es una herramienta privada que solo los metodos de la clase necesitan usar para que funcione correctamente.
 // Ejercicio 2: ¿por qué sí puedo usar los métodos depositar(), retirar() y getSaldo()?
-// Respuesta: ....................................................
+// Respuesta: Porque los metodos depositar(), retirar() y getSaldo() son públicos.
 
 // Ejercicio 3: ¿qué significa el error al intentar llamar a registrarOperacion()?
-// Respuesta: ....................................................
+// Respuesta: Significa queu registrarOperacion() es privada. 
 
 // Ejercicio 4: 
 // - ¿Qué ventajas tiene que saldo sea private?
+// Respuesta: Protege los datos 
 // - ¿Qué pasaría si saldo fuera public?
+// Si saldo fuera public cualquiera podría modificarlo sin control. 
 // - ¿Por qué registrarOperacion es private en lugar de public?
-// Respuesta: ....................................................
+// Respuesta: Porque es un metodo interno que solo los metodos publicos de su clase pueden acceder a ellos.
